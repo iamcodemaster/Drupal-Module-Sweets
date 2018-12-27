@@ -1,0 +1,7 @@
+sweets:
+  version: 1
+  css:
+    component:
+      assets/css/sweets.css: {}
+  js:
+    assets/js/thomas_more_sweets.order.js: {}

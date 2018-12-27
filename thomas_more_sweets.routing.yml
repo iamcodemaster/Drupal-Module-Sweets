@@ -1,0 +1,13 @@
+settings_sweets_form:
+  path: '/admin/config/user-interface/thomas-more-sweets/settings'
+  defaults:
+    _form: '\Drupal\thomas_more_sweets\Form\SettingsForm'
+  requirements:
+    _permission: 'access administration page'
+
+order:
+  path: '/ajax/thomas-more-sweets/order' 
+  defaults: 
+    _controller: '\Drupal\thomas_more_sweets\Controller\SweetOrderController::order'
+  requirements: 
+    _permission: 'access content' 

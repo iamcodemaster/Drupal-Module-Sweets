@@ -1,0 +1,5 @@
+type: module
+name: thomas_more_sweets
+description: 'Thomas More Sweets'
+package: Sweets 
+core: 8.x

@@ -1,0 +1,7 @@
+settings_sweets_form:
+  title: 'Sweets flavors and toppings'
+  description: 'Change the flavors and the toppings'
+  weight: -10
+  parent: system.admin_config_ui
+  route_name: settings_sweets_form
+  menu_name: admin 

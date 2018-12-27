@@ -1,0 +1,26 @@
+select {
+    color: darkslategray!important;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.form-checkboxes .form-item, .form-radios .form-item {
+    display: inline-block;
+    width: 49%;
+    margin: 10px 0;
+}
+
+.thomas-more-sweets-form .form-submit {
+    background: none!important;
+    background-color: #3B88FD!important;
+    border: none!important;
+    color: white!important;
+    width: 100%!important;
+    margin: 0!important;
+    padding: 15px!important;
+}

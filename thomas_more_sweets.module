@@ -1,0 +1,27 @@
+<?php
+
+function thomas_more_sweets_theme() {
+  return [
+    'sweets' => [
+      'variables' => [
+        'form'  => '',
+        'waffle_topping_1' => '',
+        'waffle_topping_2' => '',
+        'waffle_topping_3' => '',
+        'waffle_topping_4' => '',
+        'waffle_topping_5' => '',
+        'ice_cream_flavor_1' => '',
+        'ice_cream_flavor_2' => '',
+        'ice_cream_flavor_3' => '',
+        'ice_cream_flavor_4' => '',
+        'ice_cream_flavor_5' => '',
+        'ice_cream_count' => 0,
+        'waffle_count' => 0,
+        'ice_cream_counter' => 0,
+        'waffle_counter' => 0,
+        'waffle_order' => '',
+        'ice_cream_order' => '',
+      ],
+    ],
+  ];
+}

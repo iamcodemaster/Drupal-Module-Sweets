@@ -1,0 +1,28 @@
+<div class="sweets">
+    {{ form }}
+    <div class="order">
+        <h2>Amount needed to complete the order</h2>
+        <p class="sweet-order-count">Waffles: <span class="waffle-counter">{{ waffle_counter }}</span> / {{ waffle_count }}</p>
+        {% if waffle_order is iterable %}
+            <ul class="waffle-order-list">
+            {% for item in waffle_order %}
+                <li>Waffle with {{ item.dressing }}</li>
+            {% endfor %}
+            </ul>
+            <a href="#" class="waffle-reset-btn" data-sweet="waffle">Order the waffles</a>
+        {% else %}
+            <p>{{ waffle_order }}</p>
+        {% endif %}
+        <p class="sweet-order-count">Ice Creams: <span class="ice_cream-counter">{{ ice_cream_counter }}</span> / {{ ice_cream_count }}</p>
+        {% if ice_cream_order is iterable %}
+            <ul class="ice_cream-order-list">
+            {% for item in ice_cream_order %}
+                <li>Ice Cream with {{ item.dressing }}</li>
+            {% endfor %}
+            </ul>
+            <a href="#" class="ice_cream-reset-btn" data-sweet="ice_cream">Order the ice creams</a>
+        {% else %}
+            <p>{{ ice_cream_order }}</p>
+        {% endif %}
+    </div>
+</div>

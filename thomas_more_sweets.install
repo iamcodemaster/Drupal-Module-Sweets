@@ -1,0 +1,41 @@
+<?php
+
+function thomas_more_sweets_schema() {
+    $schema['sweets_data'] = [
+        'description' =>  'Sweets to order',
+        'fields'  => [
+            'id'  =>  [
+                'description'   =>  'The primary identifier',
+                'type'          =>  'serial',
+                'unsigned'      =>  TRUE,
+                'not null'      =>  TRUE
+            ],
+            'sweet'  =>  [
+                'description'   =>  'waffles or ice cream',
+                'type'          =>  'varchar',
+                'length'        =>  32,
+                'not null'      =>  TRUE,
+                'default'       =>  ''
+            ],
+            'dressing'  =>  [
+                'description'   =>  'type topping or flavor',
+                'type'          =>  'varchar',
+                'length'        =>  255,
+                'not null'      =>  TRUE,
+                'default'       =>  ''
+            ],
+        ],
+        'primary key'   =>  [
+            'id',
+        ],
+    ];
+
+    return $schema;
+}
+
+function thomas_more_sweets_update_8002(&$sandbox) {
+    $table = thomas_more_sweets_schema();
+    \Drupal::database()
+        ->schema()
+        ->createTable("sweets_data", $table["sweets_data"]);
+}

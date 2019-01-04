@@ -29,7 +29,7 @@ function thomas_more_sweets_schema() {
             'id',
         ],
     ];
-
+    
     return $schema;
 }
 

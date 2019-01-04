@@ -59,10 +59,22 @@ class SweetsBlock extends BlockBase {
             $connection = \Drupal::database();
             $query = $connection->query("SELECT sweet, dressing FROM {sweets_data} WHERE sweet = '$sweet'");
             $result = $query->fetchAll();
+            drupal_set_message(t($this->buildMessage($result)), 'status');
             return $result;
         }
 
         return 'still ' . $rest . ' needed to complete the order';
+    }
+
+    public function buildMessage($sweets) {
+        $message = [];
+        $type;
+        foreach ($sweets as $sweet) {
+            $message[] = '1 '.$sweet->sweet.' with '.$sweet->dressing;
+        }
+        
+        $message = implode('<br>', $message);
+        return $message;
     }
 
 }

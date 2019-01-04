@@ -17,10 +17,10 @@ class SweetsForm extends FormBase {
 
         $form['sweets'] = [
             '#type' => 'radios',
-            '#title' => $this->t('Hmm... what will you choose?'),
+            '#title' => $this->t("<h2 class='title-moto'>Hmm... what will you choose?</h2>"),
             '#options' => [
-                'waffle' => $this->t('Waffle'),
-                'ice_cream' => $this->t('Ice Cream'),
+                'waffle' => $this->t('🥮 Waffle'),
+                'ice_cream' => $this->t('🍦 Ice Cream'),
             ],
         ];
 
@@ -42,7 +42,7 @@ class SweetsForm extends FormBase {
         ];
 
         $form['topping'] = [
-            '#type' => 'select',
+            '#type' => 'checkboxes',
             '#title' => $this->t('Select a topping for your waffle'),
             '#options' => [
               \Drupal::state()->get('waffle_topping_1') => \Drupal::state()->get('waffle_topping_1'),
@@ -75,10 +75,15 @@ class SweetsForm extends FormBase {
 
     public function submitForm(array &$form, FormStateInterface $form_state) {
         if($form['sweets']['#value'] == 'waffle') {
+            $toppings = [];
+            foreach($form['topping']['#value'] as $topping) {
+                $toppings[] = $topping;
+            }
+            $toppings = implode(', ', $toppings);
             \Drupal::database()->insert('sweets_data')
             ->fields([
                 'sweet'       =>  $form['sweets']['#value'],
-                'dressing'  =>  $form['topping']['#value'],
+                'dressing'  =>  $toppings,
             ])
             ->execute();
         } else {

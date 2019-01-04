@@ -23,4 +23,154 @@ select {
     width: 100%!important;
     margin: 0!important;
     padding: 15px!important;
+    border-radius: 5px;
 }
+
+#edit-topping .js-form-type-checkbox {
+    display: block;
+    width: 100%;
+}
+
+.form-radio {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+
+.form-radio:checked::before {
+     position: absolute;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+
+.form-radio:hover {
+     background-color: #f7f7f7;
+}
+
+.form-radio:checked {
+     background-color: #f1f1f1;
+}
+
+
+.form-radio {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+
+.form-radio:checked::before {
+     position: absolute;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+
+.form-radio:hover {
+     background-color: #f7f7f7;
+}
+
+.form-radio:checked {
+     background-color: #f1f1f1;
+}
+
+.form-checkbox {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 3px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+
+.form-checkbox:checked::before {
+     position: absolute;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+
+.form-checkbox:hover {
+     background-color: #f7f7f7;
+}
+
+.form-checkbox:checked {
+     background-color: #f1f1f1;
+}
+
+.form-select {
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 50px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+}
+
+label {
+     color: #666;
+     cursor: pointer;
+} 
+
+.waffle-reset-btn, .ice_cream-reset-btn {
+    background: none!important;
+    background-color: #5af3a5!important;
+    border: none!important;
+    color: white!important;
+    margin: 5px 0 15px;
+    padding: 10px!important;
+    border-radius: 5px;
+}
+
+.sweet-order-count {
+    margin: 1em 0 0.5em;
+    font-weight: bold;
+}
+
+.title-moto {
+    font-weight: normal;
+}
+/* .form-item label, .form-wrapper .label {
+    font-size: 1.2em!important;
+} */
